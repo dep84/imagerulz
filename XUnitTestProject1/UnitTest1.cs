@@ -1,4 +1,5 @@
-using System;
+using System.IO;
+using DomainLayer.Services;
 using Xunit;
 
 namespace XUnitTestProject1
@@ -6,9 +7,19 @@ namespace XUnitTestProject1
     public class UnitTest1
     {
         [Fact]
-        public void Test1()
+        public void Should_Save_Image_TO_Dish_Given_Valid_Image_Data_As_Byte_Array()
         {
+            //Arrange
+            var image = File.ReadAllBytes("");
+            var path = "";
 
+            var imageService = new ImageService();
+            //Act
+            imageService.SaveImageToFile(path, image);
+
+            //Arrange
+
+            //Assert.True();
         }
     }
 }
