@@ -13,7 +13,7 @@ namespace DomainLayer.Services
 
                 if (imageData == null) return;
 
-                File.WriteAllBytes($"{path}/{Guid.NewGuid()}", imageData);
+                File.WriteAllBytes($"{path}/{Guid.NewGuid()}.jpg", imageData);
             }
             catch (Exception e)
             {
